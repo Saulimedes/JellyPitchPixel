@@ -1,0 +1,1197 @@
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Font%20Awesome/solid.css");
+
+/* Override accent colors from blue to white */
+:root {
+    --theme-primary-color: #ffffff !important;
+    --theme-accent-color: #ffffff !important;
+    --accent: #ffffff !important;
+    /* Floating progress bar settings */
+    --floating-progress-height: 7px;
+    --theme-menu-shadow-colour: rgba(0, 0, 0, 0.3);
+}
+
+html {
+    --theme-primary-color: #ffffff !important;
+    --theme-accent-color: #ffffff !important;
+}
+
+/* Android MUI menu text fix - force white text on dark backgrounds */
+.MuiTypography-root,
+.MuiListItemText-primary,
+.MuiListItemText-secondary,
+.MuiMenuItem-root,
+.MuiListItem-root,
+.MuiListItemButton-root,
+.MuiButtonBase-root {
+    color: #ffffff !important;
+}
+
+/* MUI drawer/menu background and text */
+.MuiDrawer-root,
+.MuiMenu-paper,
+.MuiList-root,
+.MuiPaper-root {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Override blue accent/focus states */
+.MuiListItemButton-root:hover,
+.MuiListItemButton-root.Mui-selected,
+.MuiListItemButton-root.Mui-focusVisible,
+.MuiMenuItem-root:hover,
+.MuiMenuItem-root.Mui-selected {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Jellyfin accent color overrides */
+.button-accent,
+.emby-button.button-accent,
+.accent,
+.button-submit,
+.raised.button-submit.emby-button,
+button.raised.button-submit.emby-button {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Focus/selection rings and highlights */
+.emby-button:focus,
+.paper-icon-button-light:focus:not(.headerUserButtonRound),
+.navMenuOption-selected,
+.listItem-focusscale:focus {
+    outline-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* Progress bars and sliders - thumb/handle */
+.osdPositionSlider::-webkit-slider-thumb,
+.osdVolumeSlider::-webkit-slider-thumb,
+.mdl-slider::-webkit-slider-thumb {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    -webkit-appearance: none !important;
+}
+
+.osdPositionSlider::-moz-range-thumb,
+.osdVolumeSlider::-moz-range-thumb,
+.mdl-slider::-moz-range-thumb {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: #ffffff !important;
+    -webkit-appearance: none !important;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: #ffffff !important;
+}
+
+/* Slider foreground (progress fill) */
+.mdl-slider-background-lower,
+.mdl-slider-background-lower-fill {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+/* Slider bubble (thumbnail preview) - keep default */
+.sliderBubble {
+    background: transparent !important;
+}
+
+/* Hide volume/brightness OSD indicator completely */
+.osdHeader,
+.volumeOsd,
+.brightnessOsd,
+.iconOsd {
+    display: none !important;
+}
+
+/* Video OSD page - transparent background so video fills screen */
+#videoOsdPage,
+#videoOsdPage.page,
+.videoOsdPage,
+[data-type="video-osd"],
+[data-type="video-osd"] .backgroundContainer,
+[data-type="video-osd"] .skinBody,
+[data-type="video-osd"] .mainAnimatedPage,
+[data-type="video-osd"] .libraryPage,
+.videoPlayerContainer,
+.htmlvideoplayer,
+#videoPlayer {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Remove any top/bottom padding or margins on video */
+.videoPlayerContainer,
+#videoPlayer,
+video {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force background container hidden during video playback */
+body.standby .backgroundContainer,
+body:has([data-type="video-osd"]) .backgroundContainer,
+body:has(#videoOsdPage) .backgroundContainer,
+body:has(.htmlvideoplayer) .backgroundContainer {
+    display: none !important;
+}
+
+/* Video page elements - all transparent */
+.upNextContainer,
+.syncPlayContainer,
+#videoOsdPage > *:not(.videoOsdBottom) {
+    background: transparent !important;
+}
+
+/* Remove black border from controls */
+.videoOsdBottom {
+    border: none !important;
+    border-top: none !important;
+}
+
+/* Body background during video playback */
+body:has([data-type="video-osd"]),
+body:has(#videoOsdPage),
+body:has(.htmlvideoplayer) {
+    background: #000000 !important;
+}
+
+/* Video splash/loading screen - black background */
+.videoPlayerContainer,
+.htmlvideoplayer,
+#videoPlayer,
+.videoPlayerContainer-withBackdrop,
+.mediaPlayerContainer {
+    background: #000000 !important;
+    background-color: #000000 !important;
+}
+
+/* Player controls - compact black background */
+.videoOsdBottom {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.osdControls,
+.videoOsdBottom-maincontrols {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 5px !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+}
+
+.osdControls .flex,
+.osdControls .buttons,
+.osdControls > div {
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+}
+
+.osdControls .xlargePaperIconButton {
+    font-size: 1.5em !important;
+}
+
+.osdControls .largePaperIconButton {
+    font-size: 1.2em !important;
+}
+
+/* Player control buttons - white icons default, grey background on hover, no scaling */
+.videoOsdBottom .paper-icon-button-light,
+.osdControls .paper-icon-button-light {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.videoOsdBottom .paper-icon-button-light .material-icons,
+.osdControls .paper-icon-button-light .material-icons,
+.videoOsdBottom .paper-icon-button-light span,
+.osdControls .paper-icon-button-light span {
+    color: #ffffff !important;
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+}
+
+.videoOsdBottom .paper-icon-button-light:hover,
+.osdControls .paper-icon-button-light:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+}
+
+.videoOsdBottom .paper-icon-button-light:hover .material-icons,
+.osdControls .paper-icon-button-light:hover .material-icons,
+.videoOsdBottom .paper-icon-button-light:hover span,
+.osdControls .paper-icon-button-light:hover span {
+    color: #ffffff !important;
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+}
+
+.videoOsdBottom .paper-icon-button-light:focus,
+.videoOsdBottom .paper-icon-button-light:active,
+.osdControls .paper-icon-button-light:focus,
+.osdControls .paper-icon-button-light:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+/* Progress bar slider - no white border on hover */
+.osdPositionSlider,
+.osdPositionSlider:hover,
+.osdPositionSlider:focus,
+.mdl-slider,
+.mdl-slider:hover,
+.mdl-slider:focus,
+.mdl-slider-container,
+.mdl-slider-container:hover,
+.sliderContainer,
+.sliderContainer:hover,
+.osd-slider,
+.osd-slider:hover,
+.osd-slider *,
+.osd-slider *:hover,
+input[type="range"],
+input[type="range"]:hover,
+input[type="range"]:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Player control buttons - adjust vertical alignment */
+.videoOsdBottom .paper-icon-button-light,
+.osdControls .paper-icon-button-light {
+    vertical-align: middle !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+}
+
+.videoOsdBottom .paper-icon-button-light .material-icons,
+.osdControls .paper-icon-button-light .material-icons,
+.videoOsdBottom .paper-icon-button-light span,
+.osdControls .paper-icon-button-light span {
+    padding: 8px !important;
+    margin: 0 !important;
+    position: relative !important;
+    top: -2px !important;
+}
+
+.osdTimeText,
+.osdPositionText,
+.osdDurationText {
+    background: rgba(0, 0, 0, 0.8) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+}
+
+/* Volume slider text/numbers background */
+.sliderBubbleText,
+.volumeText {
+    background: rgba(0, 0, 0, 0.8) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+}
+
+.itemProgressBarForeground-primary {
+    background-color: #ffffff !important;
+}
+
+/* Loading spinner/circle - change from blue to white */
+.mdl-spinner__layer-1 {
+    border-color: #ffffff !important;
+}
+.mdl-spinner__layer-2 {
+    border-color: #ffffff !important;
+}
+.mdl-spinner__layer-3 {
+    border-color: #ffffff !important;
+}
+.mdl-spinner__layer-4 {
+    border-color: #ffffff !important;
+}
+
+.mdl-spinner__circle {
+    border-top-color: inherit !important;
+    border-right-color: inherit !important;
+    border-bottom-color: transparent !important;
+    border-left-color: inherit !important;
+}
+
+.loading-spinner,
+.docspinner {
+    border-color: transparent !important;
+    border-top-color: #ffffff !important;
+}
+
+/* SVG spinner stroke */
+.mdl-spinner svg circle,
+.loading-spinner svg circle {
+    stroke: #ffffff !important;
+}
+
+.emby-button:hover:not(.cardImageContainer),
+.emby-button:focus:not(.cardImageContainer) {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+}
+
+.paper-icon-button-light:hover:not(.headerUserButtonRound),
+.paper-icon-button-light:focus:not(.headerUserButtonRound),
+.fab:hover,
+.fab:focus,
+.raised:hover,
+.raised:focus,
+.button-flat:hover,
+.button-flat:focus {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+}
+
+/* Prevent poster/card images from getting hover background-color */
+.cardImageContainer:hover,
+.cardImageContainer:focus,
+a.cardImageContainer:hover,
+a.cardImageContainer:focus,
+a.cardImageContainer.emby-button:hover,
+a.cardImageContainer.emby-button:focus,
+.button-link.cardImageContainer:hover,
+.button-link.cardImageContainer:focus,
+.emby-button.cardImageContainer:hover,
+.emby-button.cardImageContainer:focus {
+    background-color: transparent !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+/* Icon button hover */
+.btnPlay:hover,
+.detailButton:hover,
+.headerButton:hover:not(.headerUserButtonRound) {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+}
+
+/* Base button styles - square */
+.emby-button,
+.paper-icon-button-light,
+.fab,
+.raised,
+.button-flat,
+.btnPlay,
+.detailButton,
+.headerButton {
+    border-radius: 0 !important;
+}
+
+/* Profile/user image - keep squared */
+.headerUserImage,
+.userImage,
+.avatar,
+.headerButton img,
+.MuiAvatar-root,
+.MuiAvatar-circular,
+.headerUserButtonRound,
+div.headerUserButtonRound,
+.headerButton.headerUserButtonRound,
+div.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+/* Card overlay - disabled hover brightening effect */
+.cardOverlayContainer {
+    background-color: transparent !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s ease !important;
+}
+
+.cardBox:hover .cardOverlayContainer,
+.card:hover .cardOverlayContainer {
+    opacity: 1 !important;
+}
+
+/* Card action buttons (mark played, favorites, more) - hidden by default */
+.cardOverlayButton,
+.cardOverlayFab-primary,
+.btnCardOptions,
+.cardOverlayButtonIcon {
+    opacity: 0 !important;
+    transition: opacity 0.2s ease, background-color 0.2s ease !important;
+}
+
+.cardBox:hover .cardOverlayButton,
+.cardBox:hover .cardOverlayFab-primary,
+.cardBox:hover .btnCardOptions,
+.cardBox:hover .cardOverlayButtonIcon,
+.card:hover .cardOverlayButton,
+.card:hover .cardOverlayFab-primary,
+.card:hover .btnCardOptions,
+.card:hover .cardOverlayButtonIcon {
+    opacity: 1 !important;
+}
+
+/* Play button - transparent background, dark hover, NO BORDER EVER */
+.cardOverlayFab-primary,
+.cardOverlayButton-centered,
+.cardOverlayFab-primary *,
+.cardOverlayButton-centered * {
+    background-color: transparent !important;
+    outline: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+}
+
+.cardOverlayFab-primary:hover,
+.cardOverlayButton-centered:hover {
+    background-color: #000000 !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+}
+
+.cardOverlayFab-primary:active,
+.cardOverlayButton-centered:active {
+    background-color: #333333 !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+}
+
+/* Remove border on play button click/focus/active - ALL states */
+.cardOverlayFab-primary:focus,
+.cardOverlayFab-primary:active,
+.cardOverlayFab-primary:focus-within,
+.cardOverlayFab-primary:focus-visible,
+.cardOverlayButton-centered:focus,
+.cardOverlayButton-centered:active,
+.cardOverlayButton-centered:focus-within,
+.cardOverlayButton-centered:focus-visible,
+.cardOverlayButton:focus,
+.cardOverlayButton:active,
+.cardOverlayContainer *:focus,
+.cardOverlayContainer *:active,
+.cardOverlayContainer *:focus-visible,
+.cardOverlayContainer *:focus-within {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-color: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* NUCLEAR - kill all borders on card overlay buttons */
+.cardOverlayFab-primary,
+.cardOverlayFab-primary *,
+.cardOverlayFab-primary::before,
+.cardOverlayFab-primary::after,
+.cardOverlayFab-primary *::before,
+.cardOverlayFab-primary *::after,
+.cardOverlayButtonIcon,
+.cardOverlayButtonIcon-hover,
+.cardOverlayButtonIcon.cardOverlayButtonIcon-hover,
+span.material-icons.cardOverlayButtonIcon,
+span.cardOverlayButtonIcon.play_arrow {
+    outline: none !important;
+    outline-width: 0 !important;
+    border: none !important;
+    border-width: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.cardOverlayButtonIcon:focus,
+.cardOverlayButtonIcon:active,
+.cardOverlayButtonIcon:focus-visible,
+.cardOverlayButtonIcon-hover:focus,
+.cardOverlayButtonIcon-hover:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Last resort - strip ALL styling from card play button */
+.cardOverlayFab-primary,
+.cardOverlayButton,
+.cardOverlayButton-hover,
+button.cardOverlayFab-primary,
+.cardOverlayFab-primary:focus,
+.cardOverlayFab-primary:active,
+.cardOverlayFab-primary:hover {
+    outline: none !important;
+    outline-offset: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    -moz-outline-style: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    ring: none !important;
+    --tw-ring-shadow: none !important;
+    --tw-ring-color: transparent !important;
+}
+
+button::-moz-focus-inner,
+.cardOverlayFab-primary::-moz-focus-inner {
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+/* Try removing any ring utilities */
+.ring-0, .ring, [class*="ring"] {
+    --tw-ring-shadow: 0 0 #0000 !important;
+}
+
+/* Ripple/click animation on buttons */
+.mdl-button__ripple-container,
+.cardOverlayFab-primary .mdl-button__ripple-container {
+    display: none !important;
+}
+
+/* Nuclear - remove all white borders on click anywhere on cards */
+.cardBox *:focus,
+.cardBox *:active,
+.card *:focus,
+.card *:active,
+.cardScalable *:focus,
+.cardScalable *:active,
+button:focus,
+button:active,
+.itemAction:focus,
+.itemAction:active,
+.cardOverlayFab-primary::before,
+.cardOverlayFab-primary::after,
+.cardOverlayButton::before,
+.cardOverlayButton::after,
+.cardBox *::before,
+.cardBox *::after {
+    outline: none !important;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    ring: none !important;
+}
+
+/* Focus ring removal */
+*:focus {
+    outline-color: transparent !important;
+}
+
+.focusRing,
+.focus-ring,
+[data-focus-visible] {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Search box - white border instead of blue */
+.emby-input:focus,
+.searchfields-txtSearch:focus,
+#searchTextInput:focus {
+    border-color: #ffffff !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Selection commands bar - dark grey */
+.selectionCommandsPanel {
+    background-color: #000000 !important;
+}
+
+/* Item selection overlay - transparent so content is visible */
+.itemSelectionPanel {
+    background-color: transparent !important;
+}
+
+/* Default card backgrounds (no image) - dark grey instead of blue */
+.defaultCardBackground,
+.defaultCardBackground1,
+.defaultCardBackground2,
+.defaultCardBackground3,
+.defaultCardBackground4,
+.defaultCardBackground5,
+.cardImageContainer.defaultCardBackground,
+.cardImageContainer.defaultCardBackground1,
+.cardImageContainer.defaultCardBackground2,
+.cardImageContainer.defaultCardBackground3,
+.cardImageContainer.defaultCardBackground4,
+.cardImageContainer.defaultCardBackground5 {
+    background-color: #1a1a1a !important;
+    background: #1a1a1a !important;
+}
+
+/* MUI primary buttons - grey instead of blue */
+.MuiButton-containedPrimary,
+.MuiButton-colorPrimary {
+    background-color: #333333 !important;
+    background: #333333 !important;
+}
+
+.MuiButton-containedPrimary:hover,
+.MuiButton-colorPrimary:hover {
+    background-color: #444444 !important;
+    background: #444444 !important;
+}
+
+/* Device info stack - grey background */
+.MuiStack-root.css-1se9ewx,
+.MuiStack-root[class*="css-"] {
+    background-color: #1a1a1a !important;
+}
+
+/* Notification icon bubbles - black background */
+.MuiSvgIcon-root[data-testid="NotificationsIcon"],
+.MuiBadge-badge,
+.MuiBadge-colorPrimary {
+    background-color: #000000 !important;
+}
+
+/* Checkboxes - white instead of blue */
+.emby-checkbox:checked + span + .checkboxOutline,
+.checkboxOutline,
+.multiSelectCheckboxOutline {
+    border-color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline {
+    background-color: #ffffff !important;
+}
+
+.checkboxIcon-checked {
+    color: #000000 !important;
+}
+
+/* Remove blue borders around selected items */
+.itemSelectionPanel,
+.card.selected,
+.card.selecting {
+    border: none !important;
+    outline: none !important;
+}
+
+.chkItemSelect:focus,
+.emby-checkbox:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Other card buttons hover effect */
+.cardOverlayButton:hover,
+.cardOverlayButton-hover:hover,
+.btnCardOptions:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Card overlay buttons - square (no rounded corners) */
+.cardOverlayButton,
+.cardOverlayButton-hover,
+.cardOverlayFab-primary,
+.cardOverlayButton-centered,
+.btnCardOptions {
+    border-radius: 0 !important;
+}
+
+.cardOverlayButtonIcon,
+.cardOverlayFab-primary .mdl-button__ripple-container {
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+/* Card hover/focus/active - no scaling, no border/outline */
+.card:hover,
+.card:focus,
+.card:active,
+.cardBox:hover,
+.cardBox:focus,
+.cardContent-button:hover,
+.cardContent-button:focus,
+.cardContent-button:active {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    transform: scale(1) !important;
+}
+
+/* Detail page poster - no scale */
+.detailImageContainer .card,
+.detailImageContainer .cardBox {
+    transform: none !important;
+}
+
+/* TV interface focus states - only for actual TV/remote navigation */
+.listItem:focus,
+.listItem-focusscale:focus,
+.selectItemButton:focus,
+.focuscontainer-x:focus,
+.focuscontainer-y:focus,
+.card-focusscale:focus,
+.emby-scroller:focus,
+[data-focusscale]:focus,
+.cardBox:focus,
+.cardBox.focusable:focus {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+    outline: none !important;
+    outline-color: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+}
+
+/* TV selected item states */
+.itemSelected,
+.selected,
+.card.selected,
+.listItem.selected,
+.card-focusscale.selected,
+.focusable.selected {
+    background-color: transparent !important;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+    border: none !important;
+}
+
+/* Override any blue focus colors globally */
+*:focus {
+    outline-color: rgba(255, 255, 255, 0.5) !important;
+    border-color: inherit !important;
+}
+
+/* Catch any element with blue outline/border on focus */
+.focusable:focus,
+.button-focusscale:focus,
+[tabindex]:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: none !important;
+}
+
+/* Focus visible for keyboard/remote navigation */
+.emby-button:focus-visible,
+.paper-icon-button-light:focus-visible,
+.cardBox:focus-visible,
+.listItem:focus-visible {
+    outline: 2px solid #ffffff !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+}
+
+/* MUI icon buttons */
+.MuiIconButton-root:hover,
+.MuiIconButton-root:focus {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Ripple effects */
+.MuiTouchRipple-root,
+.MuiTouchRipple-ripple,
+.MuiTouchRipple-child {
+    color: #ffffff !important;
+}
+
+/* Sidebar background black */
+.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft {
+    background-color: #000000 !important;
+}
+
+/* Ensure other elements stay black */
+.countIndicator,
+.indicator,
+.backgroundContainer,
+.dialog,
+.skinHeader,
+.mainDrawer,
+.emby-input,
+.emby-textarea,
+.emby-select,
+.indexPage,
+.navMenuOption-selected,
+.cardBox,
+.paperList {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Hide logos */
+a[href="#/"] .MuiListItemIcon-root,
+.MuiBox-root.css-1j3tjfb,
+.pageTitleWithLogo,
+.pageTitleWithDefaultLogo,
+.pageTitleWithLogo.pageTitleWithDefaultLogo,
+.pageTitleWithLogo .pageTitleWithDefaultLogo,
+.pageTitle.pageTitleWithDefaultLogo {
+    display: none !important;
+}
+
+/* Hide "please login" text and adjust layout */
+#loginPage h1 {
+    display: none;
+}
+#loginPage .padded-left.padded-right.padded-bottom-page {
+    margin-top: 50px;
+}
+
+/* Hide "manual" and "forgot password" buttons */
+#loginPage .raised.cancel.block.btnManual.emby-button,
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+    display: none;
+}
+
+/* Floating progress bar styling */
+.fullInnerCardFooter,
+.activeSession .backgroundProgress,
+.activeSession .playbackProgress,
+.activeSession .transcodingProgress {
+    bottom: 0px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-color: none !important;
+}
+
+.playbackProgress > div,
+.backgroundProgress > div,
+.transcodingProgress > div {
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -webkit-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -moz-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    border-radius: var(--floating-progress-roundness);
+    -webkit-border-radius: var(--floating-progress-roundness);
+    -moz-border-radius: var(--floating-progress-roundness);
+}
+
+/* Progress bar foreground - white */
+.itemProgressBarForeground,
+.itemProgressBarForeground-primary {
+    background-color: #ffffff !important;
+    border-radius: var(--floating-progress-roundness) !important;
+}
+
+/* Hide progress bar on card hover */
+.cardBox:hover .itemProgressBar,
+.cardBox:hover .fullInnerCardFooter,
+.card:hover .itemProgressBar,
+.card:hover .fullInnerCardFooter {
+    opacity: 0 !important;
+    transition: opacity 0.2s ease !important;
+}
+
+.itemProgressBar,
+.fullInnerCardFooter {
+    transition: opacity 0.2s ease !important;
+}
+
+/* Progress bar background - transparent */
+.itemProgressBar {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Video player progress bar - white (played portion) */
+.mdl-slider-background-lower {
+    background-color: #ffffff !important;
+}
+
+/* Range input accent color for progress */
+input[type="range"] {
+    accent-color: #ffffff !important;
+}
+
+/* Jellyfin specific progress slider */
+.osd-slider .mdl-slider-container .mdl-slider-background-lower-fill {
+    background: #ffffff !important;
+}
+
+/* Remove underline on hover and make links bold */
+a,
+a:visited {
+    text-decoration: none !important;
+    font-weight: normal !important;
+    color: #ffffff !important;
+}
+a:hover:not(.cardImageContainer),
+a:focus:not(.cardImageContainer) {
+    text-decoration: none !important;
+    font-weight: bold !important;
+    background-color: transparent !important;
+}
+
+/* Card text links - no background on hover */
+.cardText a:hover,
+.cardText a:focus,
+.cardFooterText a:hover,
+.cardFooterText a:focus,
+.innerCardFooter a:hover,
+.innerCardFooter a:focus,
+.cardTextCentered a:hover,
+.cardTextCentered a:focus {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/*Rounded corners and square hover buttons*/
+.cardContent-button,
+.cardContent-shadow,
+.itemDetailImage,
+.cardOverlayContainer,
+.cardImageContainer,
+.cardPadder,
+.listItemImage,
+.listItemImageButton,
+.listItemButton,
+.headerButton,
+.innerCardFooter,
+.blurhash-canvas,
+.actionSheetMenuItem:hover,
+.dialog
+{border-radius: 0 !important;}
+
+
+/*Minimalistic play buttons*/
+.cardOverlayFab-primary {background-color: #00000000;}
+.cardOverlayButtonIcon {background-color: #00000000 !important;}
+.cardOverlayContainer {background-color: transparent;}
+
+/*Hide Cast Icon*/
+.headerCastButton {
+  display: none;
+}
+
+/*Hide Sync Icon Icon*/
+.headerSyncButton {
+  display: none;
+}
+
+/* Played indicator & count indicator - square style in top right corner */
+.playedIndicator,
+.countIndicator {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background-color: #000000 !important;
+    min-width: 24px !important;
+    height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 14px !important;
+    padding: 0 4px !important;
+}
+
+/* Ensure all indicator containers are flush to corner */
+.indicatoricons,
+.indicators,
+.cardIndicators {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+/* Force inner card footer indicators to top right */
+.innerCardFooter .playedIndicator,
+.innerCardFooter .countIndicator,
+.cardImageContainer .playedIndicator,
+.cardImageContainer .countIndicator,
+.cardIndicators .playedIndicator,
+.cardIndicators .countIndicator {
+    top: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+}
+
+/* Remove padding from card image container that might offset indicators */
+.cardImageContainer {
+    padding: 0 !important;
+}
+
+/* cardBox and card padding reset */
+.cardBox,
+.card,
+.cardScalable {
+    padding: 0 !important;
+}
+
+/* FINAL OVERRIDE - Card play button NO WHITE BORDER */
+html body .cardOverlayFab-primary,
+html body .cardOverlayFab-primary:hover,
+html body .cardOverlayFab-primary:active,
+html body .cardOverlayFab-primary:focus,
+html body .cardOverlayFab-primary:focus-visible,
+html body .cardOverlayFab-primary:focus-within,
+html body .cardOverlayFab-primary span,
+html body .cardOverlayButtonIcon,
+html body .cardOverlayButtonIcon-hover,
+html body span.cardOverlayButtonIcon.cardOverlayButtonIcon-hover {
+    outline: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    -moz-outline-style: none !important;
+}
+
+html body .headerUserButtonRound:hover,
+html body div.headerUserButtonRound:hover,
+html body .headerUserButtonRound:hover *,
+html body div.headerUserButtonRound:hover * {
+    border: 2px solid #333333 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+/* Remove ripple effect from profile button */
+.headerUserButtonRound .mdl-button__ripple-container,
+.headerUserButtonRound::before,
+.headerUserButtonRound::after {
+    display: none !important;
+}
+
+/* Nuclear override for profile button - no flash ever */
+.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound {
+    background-color: #000000 !important;
+    -webkit-tap-highlight-color: transparent !important;
+    transition: none !important;
+    animation: none !important;
+    border: 2px solid transparent !important;
+    box-sizing: border-box !important;
+}
+
+.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:hover,
+.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:focus,
+.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:active,
+.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:focus-within,
+.headerButton.headerButtonRight.paper-icon-button-light.headerUserButtonRound:focus-visible {
+    background-color: #000000 !important;
+    -webkit-tap-highlight-color: transparent !important;
+    transition: none !important;
+    animation: none !important;
+    border: 2px solid #333333 !important;
+}
+
+
+html body .headerUserButtonRound:active,
+html body .headerUserButtonRound:focus,
+html body div.headerUserButtonRound:active,
+html body div.headerUserButtonRound:focus {
+    border: 2px solid #333333 !important;
+    background-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* TV Focus - Override blue borders with white (only on focus) */
+.cardBox.visualCardBox,
+.cardScalable,
+.cardBox {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Only outline around the whole card, not inner elements */
+html body .card:focus,
+html body .card.show-focus:focus,
+html body .focuscontainer-x .card:focus,
+html body .focuscontainer-y .card:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+html body .card:focus .cardBox,
+html body .card:focus .cardBox.visualCardBox,
+html body .card.show-focus:focus .cardBox {
+    outline: none !important;
+    border: 4px solid #ffffff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Override any blue accent/primary colors globally */
+html {
+    --theme-primary-color: #ffffff !important;
+    --accent: #ffffff !important;
+}
+
+* {
+    --theme-primary-color: #ffffff !important;
+}
+
+/* Select and input labels - white text */
+.selectLabel,
+label.selectLabel,
+.inputLabel,
+label.inputLabel,
+.inputLabel-float,
+.inputLabelUnfocused,
+.inputLabelFocused {
+    color: #ffffff !important;
+}
+
+/* Remove blue border from select/language selector */
+.emby-select,
+.emby-select:focus,
+.emby-select:active,
+select,
+select:focus,
+select:active {
+    border-color: #ffffff !important;
+    outline: none !important;
+    box-shadow: none !important;
+}

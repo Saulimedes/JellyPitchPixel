@@ -767,11 +767,16 @@ button:active,
     box-shadow: none !important;
 }
 
-/* Other card buttons hover effect */
+/* Other card buttons hover effect - black on video cards */
 .cardOverlayButton:hover,
 .cardOverlayButton-hover:hover,
-.btnCardOptions:hover {
-    background-color: #333333 !important;
+.btnCardOptions:hover,
+.cardOverlayContainer .paper-icon-button-light:hover,
+.cardBox .paper-icon-button-light:hover,
+.card .paper-icon-button-light:hover,
+button:has(.cardOverlayButtonIcon):hover,
+.cardOverlayFab-primary:hover {
+    background-color: #000000 !important;
     color: #ffffff !important;
 }
 
@@ -1233,6 +1238,15 @@ select:active {
 /* Playback controls - grey hover background (high specificity override) */
 html body .videoOsdBottom .paper-icon-button-light:hover,
 html body .osdControls .paper-icon-button-light:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Back button in video player - grey hover */
+button:has(.arrow_back):hover,
+.btnVideoOsdBack:hover,
+.headerBackButton:hover,
+button:has(.material-icons.arrow_back):hover {
     background-color: #333333 !important;
     color: #ffffff !important;
 }

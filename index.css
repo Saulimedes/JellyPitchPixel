@@ -1279,14 +1279,19 @@ html body .osdControls .paper-icon-button-light:hover {
    PROFILE BUTTON
    ============================================ */
 
-/* Button - square for hover, with padding for larger hover area */
+/* Button - square for hover, matching search button size */
 button.headerUserButtonRound,
 button.headerUserButton {
     border-radius: 0 !important;
     overflow: visible !important;
-    padding: 12px !important;
-    box-sizing: content-box !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    border: 4px solid transparent !important;
+    box-sizing: border-box !important;
     margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 /* Inner div - round profile picture */
@@ -1300,4 +1305,12 @@ div.headerUserButtonRound[style] {
 /* Hover effect on button */
 button.headerUserButtonRound:hover {
     background: #333333 !important;
+}
+
+/* Hide text labels on Home and Favorites buttons, keep icons */
+.headerTabs .emby-tab-button .emby-button-foreground,
+.headerTabs .emby-tab-button-text,
+button[title="Home"] span:not(.material-icons),
+button[title="Favorites"] span:not(.material-icons) {
+    display: none !important;
 }

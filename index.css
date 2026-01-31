@@ -14,7 +14,7 @@
 
 .material-icons::before {
     font-family: 'pixelart-icons-font' !important;
-    font-size: 24px !important;
+    font-size: 2rem !important;
     line-height: 1 !important;
     vertical-align: middle !important;
     display: inline-block !important;
@@ -433,7 +433,13 @@ body:has(.htmlvideoplayer) .backgroundContainer {
 
 .upNextContainer,
 .upNextDialog,
-.upNextContainer-transparent {
+.upNextContainer-transparent,
+.osdPoster,
+.nextUpCard,
+.upNextDialog-poster,
+.upNextContainer-poster,
+div[class*="upNext"],
+div[class*="nextUp"] {
     background: #000000 !important;
     background-color: #000000 !important;
     color: #ffffff !important;
@@ -1436,7 +1442,16 @@ button:has(.favorite),
 button:has(.favorite_border),
 .btnUserRating,
 .detailButton:has(.favorite),
-.detailButton:has(.favorite_border) {
+.detailButton:has(.favorite_border),
+.videoOsdBottom button:has(.favorite),
+.videoOsdBottom button:has(.favorite_border),
+.osdControls button:has(.favorite),
+.osdControls button:has(.favorite_border),
+.videoOsdBottom .btnUserRating,
+.osdControls .btnUserRating,
+button.btnAddToPlaylist[data-action="addtoplaylist"]:has(.favorite),
+.paper-icon-button-light:has(.favorite),
+.paper-icon-button-light:has(.favorite_border) {
     display: none !important;
 }
 
@@ -1633,7 +1648,21 @@ html body .osdControls .largePaperIconButton:hover,
 html body .videoOsdBottom .xlargePaperIconButton:hover,
 html body .videoOsdBottom .largePaperIconButton:hover,
 html body .videoOsdBottom button:hover,
-html body .osdControls button:hover {
+html body .osdControls button:hover,
+html body .osdControls .xlargePaperIconButton:focus,
+html body .osdControls .largePaperIconButton:focus,
+html body .videoOsdBottom .xlargePaperIconButton:focus,
+html body .videoOsdBottom .largePaperIconButton:focus,
+html body .videoOsdBottom button:focus,
+html body .osdControls button:focus,
+html body .videoOsdBottom .material-icons:hover,
+html body .videoOsdBottom .material-icons:focus,
+html body .osdControls .material-icons:hover,
+html body .osdControls .material-icons:focus,
+html body .videoOsdBottom span:hover,
+html body .videoOsdBottom span:focus,
+html body .osdControls span:hover,
+html body .osdControls span:focus {
     background-color: #333333 !important;
     color: #ffffff !important;
 }

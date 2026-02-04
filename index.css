@@ -376,8 +376,8 @@ button.raised.button-submit.emby-button {
     background-color: #ffffff !important;
     -webkit-appearance: none !important;
     border-radius: 0 !important;
-    width: 18px !important;
-    height: 18px !important;
+    width: 24px !important;
+    height: 24px !important;
 }
 
 .osdPositionSlider::-moz-range-thumb,
@@ -386,23 +386,23 @@ button.raised.button-submit.emby-button {
     background: #ffffff !important;
     background-color: #ffffff !important;
     border-radius: 0 !important;
-    width: 18px !important;
-    height: 18px !important;
+    width: 24px !important;
+    height: 24px !important;
 }
 
 input[type="range"]::-webkit-slider-thumb {
     background: #ffffff !important;
     -webkit-appearance: none !important;
     border-radius: 0 !important;
-    width: 18px !important;
-    height: 18px !important;
+    width: 24px !important;
+    height: 24px !important;
 }
 
 input[type="range"]::-moz-range-thumb {
     background: #ffffff !important;
     border-radius: 0 !important;
-    width: 18px !important;
-    height: 18px !important;
+    width: 24px !important;
+    height: 24px !important;
 }
 
 .mdl-slider-background-lower,
@@ -698,17 +698,18 @@ input[type="range"]:focus {
 .osdPositionText,
 .osdDurationText {
     font-family: 'Silkscreen', cursive !important;
+    font-size: 1.2em !important;
     background: rgba(0, 0, 0, 0.8) !important;
-    padding: 2px 6px !important;
+    padding: 4px 8px !important;
     border-radius: 0 !important;
 }
 
 .sliderBubbleText,
 .volumeText {
     font-family: 'Silkscreen', cursive !important;
-    font-size: 0.85em !important;
+    font-size: 1.4em !important;
     background: rgba(0, 0, 0, 0.8) !important;
-    padding: 2px 6px !important;
+    padding: 4px 10px !important;
     border-radius: 0 !important;
 }
 
